@@ -55,7 +55,7 @@
                                  
                                     <h2><b>Halal Go</b> Your Halal Hotspot App</h2>
                                     <p>100+ Verified Halal Hotsposts added a day</p>
-                                    <a class="btn btn-primary btn-lg" href="#">Download</a>
+                                    <a class="btn btn-primary btn-lg" href="#features" onclick="scrollToDownload()">Download</a>
                                 
                             </div>
                         </div>
@@ -382,5 +382,16 @@
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/custom-scripts.js"></script>
+    <script>
+  function scrollToDownload() {
+    event.preventDefault(); // prevent default behavior of the anchor tag
+    var downloadSection = document.getElementById("features"); // get the download section
+    var offsetTop = downloadSection.offsetTop; // get the offsetTop position of the download section
+    window.scrollTo({
+      top: offsetTop, // scroll to the offsetTop position of the download section
+      behavior: "smooth" // make the scrolling smooth
+    });
+  }
+</script>
 </body>
 </html>
